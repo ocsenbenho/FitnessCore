@@ -9,15 +9,12 @@ ShieldCheck,
 Footprints,
 Loader2,
 Info,
-Copy,
-Check,
 PlayCircle
 } from 'lucide-react';
 
 const App = () => {
 const [activeDay, setActiveDay] = useState(0);
 const [activeExerciseIdx, setActiveExerciseIdx] = useState(0);
-const [isCopied, setIsCopied] = useState(false);
 
 const workoutPlan = [
 {
@@ -237,28 +234,6 @@ setActiveDay(idx);
 setActiveExerciseIdx(0); // Reset exercise selection when switching tabs
 };
 
-const handleCopyJSON = () => {
-const exportData = workoutPlan.map(day => ({
-day: day.day,
-title: day.title,
-focus: day.focus,
-exercises: day.exercises
-}));
-
-const textArea = document.createElement("textarea");
-textArea.value = JSON.stringify(exportData, null, 2);
-document.body.appendChild(textArea);
-textArea.select();
-try {
-document.execCommand('copy');
-setIsCopied(true);
-setTimeout(() => setIsCopied(false), 2000);
-} catch (err) {
-console.error('Lỗi khi copy', err);
-}
-document.body.removeChild(textArea);
-};
-
 const activeData = workoutPlan[activeDay];
 const activeExercise = activeData.exercises[activeExerciseIdx];
 
@@ -278,13 +253,6 @@ return (
                         tảng và bảo vệ xương khớp cho người mới.
                     </p>
                 </div>
-            </div>
-            <div className="mt-8 pt-6 border-t border-slate-700 flex justify-center md:justify-start">
-                <button onClick={handleCopyJSON}
-                    className="flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-bold rounded-xl transition-colors shadow-lg">
-                    {isCopied ? <Check size={20} /> : <Copy size={20} />}
-                    {isCopied ? "Đã lưu JSON vào Clipboard!" : "Sao chép toàn bộ Dữ Liệu (JSON)"}
-                </button>
             </div>
         </div>
     </header>
