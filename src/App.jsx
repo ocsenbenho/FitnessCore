@@ -261,6 +261,181 @@ fix: "Xoè rộng hai đầu gối sang hai bên sẽ giúp ngực chìm sâu xu
 videoId: "AgwjXQJqfYo"
 }
 ]
+},
+{
+day: "Buổi 8",
+title: "Thân Trên Toàn Diện",
+focus: "Ngực, Vai, Lưng xô và Kiểm soát cơ core tĩnh",
+icon: <Flame className="text-orange-500" />,
+exercises: [
+{
+name: "Push Ups (Hít đất)",
+sets: "4 hiệp x 8-15 lần",
+target: "Ngực, Vai trước, Tay sau",
+wrong: "Khuỷu tay xoè rộng sang hai bên tạo góc 90 độ. Võng lưng rớt hông khi đẩy lên.",
+right: "Lưng và mông siết chặt thành đường thẳng. Khuỷu tay khép lại tạo góc 45 độ so với thân người.",
+fix: "Hít đất không chỉ là tập ngực - nó là một bài Plank di động. Hãy gồng chặt mông và đùi trước khi hạ ngực xuống.",
+videoId: "UIcct-7b6oE"
+},
+{
+name: "Prone YTW",
+sets: "3 hiệp x 15 lần",
+target: "Vai sau, Chóp xoay, Lưng giữa",
+wrong: "Nhấc ngực quá cao khỏi mặt sàn. Dùng đà quăng tay mạnh về sau.",
+right: "Trán chạm sàn. Gồng chặt bả vai để ép cánh tay tạo thành các chữ Y, T, W.",
+fix: "Ép chặt hai xương bả vai lại với nhau ở điểm cao nhất (như đang kẹp một cây bút chì giữa lưng).",
+videoId: "HvdLRWBprws"
+},
+{
+name: "Plank Shoulder Taps",
+sets: "3 hiệp x 20 lần (Cả 2 bên)",
+target: "Core chống xoay, Vai, Thăng bằng",
+wrong: "Hông lắc lư dữ dội sang hai bên mỗi khi nhấc tay lên. Mất thăng bằng.",
+right: "Hông giữ vững song song với mặt sàn như bị đóng băng. Chuyển tay chậm và kiểm soát.",
+fix: "Dang rộng hai chân bằng vai hoặc hơn một chút sẽ giúp tạo chân đế vững vàng, khoá chặt eo dễ hơn.",
+videoId: "eyeuugrpLYA"
+}
+]
+},
+{
+day: "Buổi 9",
+title: "Chân Động Tiên Tiến",
+focus: "Đùi trong, Mông và Chuyển động đa chiều",
+icon: <Activity className="text-red-500" />,
+exercises: [
+{
+name: "Lateral Lunges",
+sets: "4 hiệp x 10 lần/chân",
+target: "Đùi trong, Mông, Khớp hông",
+wrong: "Đầu gối đâm về trước quá đà thay vì đẩy mông ra sau. Lưng gù gập xuống sàn.",
+right: "Bước chân sang ngang, đẩy mông lùi về sau như đang ngồi lên chiếc ghế. Chân trụ giữ thẳng.",
+fix: "Xoay nhẹ mũi chân của chân lunge ra ngoài khoảng 15 độ để đầu gối di chuyển mượt mà hơn.",
+videoId: "8ANwlFziwtk"
+},
+{
+name: "Step Ups",
+sets: "4 hiệp x 10 lần/chân",
+target: "Đùi trước, Mông (Sức mạnh đơn)",
+wrong: "Dùng chân ở dưới đất để 'nhún rập' quăng đà đẩy người lên. Đổ thân quá xa về sau.",
+right: "Ngả nhẹ người tới trước 10-15 độ. Dùng 100% sức kéo của chân CÓ ở trên ghế để đạp lên.",
+fix: "Nhấc cất ngón chân của bàn chân dưới đất lên trời trước khi đẩy sức để vô hiệu hóa lực lún.",
+videoId: "PzDbmqL6qo8"
+},
+{
+name: "Skater Jumps",
+sets: "4 hiệp x 30 giây",
+target: "Sức bật ngang, Tim mạch, Mông hai bên",
+wrong: "Khoảng cách nhảy quá ngắn. Thân người cứng đờ không nhấp nhô nhún nhảy.",
+right: "Nhảy vọt ngang mạnh mẽ hai bên. Vào tư thế khuỵu gối để hãm xung, chân sau vắt nhẹ sang đối diện.",
+fix: "Tưởng tượng bạn là một vận động viên trượt băng: Đạp mạnh - Bay vút - Bám dính và giữ vững mặt sàn.",
+videoId: "IkGOdk2VDJw"
+}
+]
+},
+{
+day: "Buổi 10",
+title: "Giãn Cơ Phục Hồi",
+focus: "Linh hoạt vùng hông, bảo vệ khớp và hồi phục",
+icon: <Info className="text-sky-500" />,
+exercises: [
+{
+name: "World's Greatest Stretch",
+sets: "3 hiệp x 5 lần/chân",
+target: "Toàn thân, Hông mở rộng",
+wrong: "Tập quá nhanh lướt qua các điểm cần giãn. Gù quặp lưng quá mức.",
+right: "Giữ gối gót chân sau căng nảy khỏi mặt đất. Đưa cùi chỏ sát vào cổ chân trước rồi vươn tay nhìn trần.",
+fix: "Mỗi khi đến một điểm giới hạn, hãy thở hắt ra thật sâu để hệ thần kinh trung ương ra lệnh thư giãn cơ bắp.",
+videoId: "-CiWQ2IvY34"
+},
+{
+name: "Downward Dog to Cobra",
+sets: "3 hiệp x 10 chu kỳ",
+target: "Lưng sau, Vai, Ngực, Cột sống",
+wrong: "Ép gót chân xuống sàn bằng mọi giá khiến khung chậu gù lưng. Ngửa cổ gắt quá mức gây nguy cơ chấn thương.",
+right: "Vuốt thẳng lumbars ở Downward Dog (mông nhô lên cao nhất). Từ từ lòn sóng trườn xuống và ưỡn ngực lên Cobra.",
+fix: "Nếu gân kheo (sau đùi) quá cứng cỏi, hãy hơi cong nhẹ hai đầu gối. Ưu tiên số 1 là đẩy ngực giải lưng.",
+videoId: "-blQ3If_HEI"
+},
+{
+name: "90/90 Hip Stretch",
+sets: "3 hiệp x 1 phút/bên",
+target: "Khớp háng, Mông, Cải thiện dáng đi",
+wrong: "Kê gối lệch bậy bạ không đủ 90 độ. Gập lưng xuống uốn cong (C-shape).",
+right: "Hai đùi vế tạo 2 góc vuông hoàn hảo dưới sàn. Rướn ngược phần ngực xuống thẳng tới cẳng chân.",
+fix: "Tưởng tượng như ép 2 đầu gối xuống sàn lực cực mạnh 10s rồi nhả lỏng, thả nhẹ cả sức nặng đè lên cẳng bộ.",
+videoId: "QxQDEH2KXps"
+}
+]
+},
+{
+day: "Buổi 11",
+title: "Core Đứng Từ Xa",
+focus: "Bụng đứng, Eo và sức mạnh Lưng dưới tĩnh",
+icon: <ShieldCheck className="text-emerald-500" />,
+exercises: [
+{
+name: "Standing Wood Chop",
+sets: "3 hiệp x 15 lần/bên",
+target: "Xiên bụng, Sức mạnh xoắn",
+wrong: "Hai tay bẻ ngoặt ra đằng sau gây hỏng hệ khung xương. Không xoay hướng chân trụ.",
+right: "Khóa chặt hông đùi, chỉ lồng ngực xoay vặn theo phương xiên kéo mộc. Hai cánh tay vững chắc.",
+fix: "Xoay nhẹ cái gót chân rướn qua để tạo cảm giác xoắn thân trên mạnh nhất.",
+videoId: "OgQU_bbdB7c"
+},
+{
+name: "Good Mornings",
+sets: "4 hiệp x 12 lần",
+target: "Đùi sau (Hamstrings), Lưng dưới (Erector Spinae)",
+wrong: "Cúi gập lưng cong hình con tôm. Khuỵu gối y hệt như bài chùng gối - sai trầm trọng.",
+right: "Hé nhẹ khớp gối vài nanomet để tránh tổn thương khớp, vươn dài mông đập mạnh ra sau tới khi lưng vươn phẳng như mặt bàn.",
+fix: "Hãy mường tượng 1 bàn tay bạn đặt hững hờ sau gáy, hông là bản lề cánh cửa, lưng diệt trừ không suy chuyển.",
+videoId: "sAAn3y-qxP4"
+},
+{
+name: "Standing Cross Crunch",
+sets: "4 hiệp x 20 lần",
+target: "Cơ bụng toàn diện (Cardio-Core)",
+wrong: "Cố gập cổ chúc chích dọng mũi đập vào đùi thay vì giục đầu gối phóng cao.",
+right: "Quạt gối chấn mạnh bay cắt chéo lên. Lồng ngực vặn uốn gắt lấy cùi chỏ khóa lấy đích đầu gối kia.",
+fix: "Ở khoảnh khắc chạm tiếp ứng cao này, thở dồn nén ra y như đấm túi cát để lườn quặn cực hạn.",
+videoId: "aQFLVDY0DMU"
+}
+]
+},
+{
+day: "Buổi 12",
+title: "Cường Độ Cao Vòng Lặp",
+focus: "Tim mạch tột độ, Đốt Calo tổng hợp (AMRAP)",
+icon: <Activity className="text-red-600" />,
+exercises: [
+{
+name: "Thrusters",
+sets: "4 hiệp x 10 lần",
+target: "Đùi trước, Vai, Toàn Thân",
+wrong: "Lẩy tay lên ngang ngửa đùi đẩy trước khi hông kích nổ đủ biên độ. Phá nhịp thở nối đoạn.",
+right: "Lặn sâu bằng Squat nảy bật chỏ. Xực toàn lực mông đùi kéo gót đứng dậy xả tạ xuyên thấu nóc nhà trần vách.",
+fix: "Quán triệt đây là 1 chuyển hoán truyền động nguyên khối từ lòng bàn chân xả bắn vào bàn tay.",
+videoId: "qnOikHllwWc"
+},
+{
+name: "Renegade Rows",
+sets: "4 hiệp x 10 lần/bên",
+target: "Lưng xô, Core cân bằng dưới tạ",
+wrong: "Lật tráo chậu xương nghiêng lả lướt để lấy gia tốc đà quăng cho tạ.",
+right: "Hãm chân ngang bửa sàn bê tông. Siết mông chằng đai 100% khi lần lượt nhặt bứt rút tạ vào xô lườn.",
+fix: "Mọi trọng điểm ăn tiền nhất nằm ở sự đóng đinh tuyệt đối của hai gót chân, đừng xót sức căng bụng đùi nhé.",
+videoId: "0lj8lL2p9Z0"
+},
+{
+name: "Burpee Broad Jump",
+sets: "4 hiệp x 8 lần",
+target: "Thể lực yếm khí, Đùi trước",
+wrong: "Trèo thó leo chậm chạp không tạo ra nhịp thở. Chường mũi tiếp đất ngắn ngủi.",
+right: "Đạp cút chống bằng Pushup chuẩn. Thu đùi về tư thế như chú ếch và tung phốc lao xa.",
+fix: "Sốc vung cặp tay thật đanh thép như xông vách chướng ngại vật trước khi thu hạ thân.",
+videoId: "xaBTCkqiUKo"
+}
+]
 }
 ];
 
