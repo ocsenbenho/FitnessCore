@@ -14,12 +14,20 @@ import {
 import { workoutPlan } from './data/workoutPlan';
 import { level2Plan } from './data/level2Plan';
 import { level3Plan } from './data/level3Plan';
+import { mobilityPlan } from './data/mobilityPlan';
 
 
 const App = () => {
 const [activeDay, setActiveDay] = useState(0);
 const [activeExerciseIdx, setActiveExerciseIdx] = useState(0);
 const [activeLevel, setActiveLevel] = useState(1);
+
+const levels = [
+    { id: 1, name: "Sơ Cấp", desc: "Nền tảng cơ bản" },
+    { id: 2, name: "Trung Cấp", desc: "Bro-Split 6 ngày" },
+    { id: 3, name: "Cao Cấp", desc: "Bứt phá giới hạn" },
+    { id: 4, name: "Mobility", desc: "Linh hoạt & Khôi phục" }
+];
 
 const handleLevelChange = (lvlId) => {
     setActiveLevel(lvlId);
@@ -32,7 +40,7 @@ const handleDayChange = (idx) => {
     setActiveExerciseIdx(0);
 };
 
-const activeArray = activeLevel === 1 ? workoutPlan : (activeLevel === 2 ? level2Plan : (activeLevel === 3 ? level3Plan : []));
+const activeArray = activeLevel === 1 ? workoutPlan : (activeLevel === 2 ? level2Plan : (activeLevel === 3 ? level3Plan : (activeLevel === 4 ? mobilityPlan : [])));
 const activeData = activeArray.length > 0 ? (activeArray[activeDay] || activeArray[0]) : null;
 const activeExercise = activeData ? (activeData.exercises[activeExerciseIdx] || activeData.exercises[0]) : null;
 
@@ -61,28 +69,23 @@ return (
 
     <main className="max-w-5xl mx-auto mt-8 px-4">
         {/* Level Selector */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
-            {[
-                { id: 1, name: "Sơ Cấp", desc: "Nền tảng & Kỹ thuật" },
-                { id: 2, name: "Trung Cấp", desc: "Push / Pull / Legs" },
-                { id: 3, name: "Cao Cấp", desc: "Bứt phá giới hạn" }
-            ].map(lvl => (
-                <button 
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            {levels.map((lvl) => (
+                <button
                     key={lvl.id}
                     onClick={() => handleLevelChange(lvl.id)}
-                    className={`px-6 py-4 rounded-2xl font-bold transition-all border-2 flex-1 min-w-[200px] ${
-                        activeLevel === lvl.id 
-                        ? 'bg-emerald-500 border-emerald-500 text-white shadow-lg transform scale-[1.02]'
-                        : 'bg-white border-slate-200 text-slate-500 hover:border-emerald-300 hover:text-emerald-600'
-                    }`}
+                    className={`relative p-6 rounded-3xl text-left transition-all duration-300 overflow-hidden group ${activeLevel === lvl.id
+                        ? (lvl.id === 4 ? 'bg-gradient-to-br from-teal-500 to-emerald-600 shadow-teal-500/30 text-white shadow-xl scale-105' : 'bg-gradient-to-br from-indigo-500 to-blue-600 shadow-indigo-500/30 text-white shadow-xl scale-105')
+                        : 'bg-white hover:bg-slate-50 border border-slate-200 text-slate-600 hover:border-indigo-200'
+                        }`}
                 >
-                    <div className="text-lg">{lvl.name}</div>
-                    <div className="text-xs font-normal opacity-80 mt-1">{lvl.desc}</div>
+                    <div className="text-lg font-black">{lvl.name}</div>
+                    <div className="text-xs font-medium opacity-80 mt-1">{lvl.desc}</div>
                 </button>
             ))}
         </div>
 
-        {(activeLevel === 1 || activeLevel === 2 || activeLevel === 3) && activeData ? (
+        {(activeLevel === 1 || activeLevel === 2 || activeLevel === 3 || activeLevel === 4) && activeData ? (
             <>
                 {/* Navigation Tabs */}
                 <div className="flex flex-wrap gap-3 mb-8">
