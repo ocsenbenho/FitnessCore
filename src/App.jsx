@@ -15,6 +15,7 @@ import { workoutPlan } from './data/workoutPlan';
 import { level2Plan } from './data/level2Plan';
 import { level3Plan } from './data/level3Plan';
 import { mobilityPlan } from './data/mobilityPlan';
+import { nutritionPlan } from './data/nutritionPlan';
 
 
 const App = () => {
@@ -26,7 +27,8 @@ const levels = [
     { id: 1, name: "Sơ Cấp", desc: "Nền tảng cơ bản" },
     { id: 2, name: "Trung Cấp", desc: "Bro-Split 6 ngày" },
     { id: 3, name: "Cao Cấp", desc: "Bứt phá giới hạn" },
-    { id: 4, name: "Mobility", desc: "Linh hoạt & Khôi phục" }
+    { id: 4, name: "Mobility", desc: "Linh hoạt & Khôi phục" },
+    { id: 5, name: "Dinh Dưỡng", desc: "Thực đơn 30 ngày" }
 ];
 
 const handleLevelChange = (lvlId) => {
@@ -40,7 +42,7 @@ const handleDayChange = (idx) => {
     setActiveExerciseIdx(0);
 };
 
-const activeArray = activeLevel === 1 ? workoutPlan : (activeLevel === 2 ? level2Plan : (activeLevel === 3 ? level3Plan : (activeLevel === 4 ? mobilityPlan : [])));
+const activeArray = activeLevel === 1 ? workoutPlan : (activeLevel === 2 ? level2Plan : (activeLevel === 3 ? level3Plan : (activeLevel === 4 ? mobilityPlan : (activeLevel === 5 ? nutritionPlan : []))));
 const activeData = activeArray.length > 0 ? (activeArray[activeDay] || activeArray[0]) : null;
 const activeExercise = activeData ? (activeData.exercises[activeExerciseIdx] || activeData.exercises[0]) : null;
 
@@ -69,23 +71,23 @@ return (
 
     <main className="max-w-5xl mx-auto mt-8 px-4">
         {/* Level Selector */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-12">
             {levels.map((lvl) => (
                 <button
                     key={lvl.id}
                     onClick={() => handleLevelChange(lvl.id)}
-                    className={`relative p-6 rounded-3xl text-left transition-all duration-300 overflow-hidden group ${activeLevel === lvl.id
-                        ? (lvl.id === 4 ? 'bg-gradient-to-br from-teal-500 to-emerald-600 shadow-teal-500/30 text-white shadow-xl scale-105' : 'bg-gradient-to-br from-indigo-500 to-blue-600 shadow-indigo-500/30 text-white shadow-xl scale-105')
+                    className={`relative p-5 rounded-3xl text-left transition-all duration-300 overflow-hidden group ${activeLevel === lvl.id
+                        ? (lvl.id === 5 ? 'bg-gradient-to-br from-amber-500 to-orange-600 shadow-orange-500/30 text-white shadow-xl scale-105' : (lvl.id === 4 ? 'bg-gradient-to-br from-teal-500 to-emerald-600 shadow-teal-500/30 text-white shadow-xl scale-105' : 'bg-gradient-to-br from-indigo-500 to-blue-600 shadow-indigo-500/30 text-white shadow-xl scale-105'))
                         : 'bg-white hover:bg-slate-50 border border-slate-200 text-slate-600 hover:border-indigo-200'
                         }`}
                 >
-                    <div className="text-lg font-black">{lvl.name}</div>
+                    <div className="text-base md:text-lg font-black">{lvl.name}</div>
                     <div className="text-xs font-medium opacity-80 mt-1">{lvl.desc}</div>
                 </button>
             ))}
         </div>
 
-        {(activeLevel === 1 || activeLevel === 2 || activeLevel === 3 || activeLevel === 4) && activeData ? (
+        {(activeLevel === 1 || activeLevel === 2 || activeLevel === 3 || activeLevel === 4 || activeLevel === 5) && activeData ? (
             <>
                 {/* Navigation Tabs */}
                 <div className="flex flex-wrap gap-3 mb-8">
@@ -124,7 +126,7 @@ return (
                     <div className="space-y-6">
                         <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
                             <h2 className="text-2xl font-black mb-6 flex items-center gap-2">
-                                Danh sách bài tập & Phân tích Form
+                                {activeLevel === 5 ? "Thực Đơn Dinh Dưỡng & Công Thức" : "Danh sách bài tập & Phân tích Form"}
                             </h2>
 
                             <div className="space-y-6">
@@ -140,28 +142,27 @@ return (
                                                 : 'border-slate-100 bg-slate-50 hover:border-emerald-300 hover:bg-white'
                                             }`}
                                         >
-                                            {/* Exercise Header */}
-                                            <div className={`p-4 flex justify-between items-center transition-colors ${isSelected ? 'bg-slate-800 text-white' : 'bg-slate-100 text-slate-800'}`}>
+                                            {/* Exercise/Meal Header */}
+                                            <div className={`p-4 flex justify-between items-center transition-colors ${isSelected ? (activeLevel === 5 ? 'bg-orange-600 text-white' : 'bg-slate-800 text-white') : 'bg-slate-100 text-slate-800'}`}>
                                                 <div className="flex items-center gap-3">
-                                                    <div className={`p-2 rounded-full ${isSelected ? 'bg-emerald-500 text-slate-900' : 'bg-white text-emerald-500 shadow-sm'}`}>
+                                                    <div className={`p-2 rounded-full ${isSelected ? (activeLevel === 5 ? 'bg-white text-orange-600' : 'bg-emerald-500 text-slate-900') : 'bg-white text-emerald-500 shadow-sm'}`}>
                                                         <PlayCircle size={20} />
                                                     </div>
                                                     <div>
                                                         <h3 className="font-bold text-lg">{ex.name}</h3>
-                                                        <p className={`text-xs ${isSelected ? 'text-slate-300' : 'text-slate-500'}`}>Nhóm cơ: {ex.target}</p>
+                                                        <p className={`text-xs ${isSelected ? 'text-slate-300' : 'text-slate-500'}`}>{activeLevel === 5 ? 'Thực đơn Tự nấu' : `Nhóm cơ: ${ex.target}`}</p>
                                                     </div>
                                                 </div>
-                                                <span className={`px-3 py-1 font-mono text-sm rounded border ${isSelected ? 'bg-slate-700 text-emerald-400 border-slate-600' : 'bg-white text-slate-700 border-slate-200 shadow-sm'}`}>
-                                                    {ex.sets}
+                                                <span className={`px-3 py-1 font-mono text-xs md:text-sm rounded border ${isSelected ? (activeLevel === 5 ? 'bg-orange-800 text-amber-200 border-orange-700' : 'bg-slate-700 text-emerald-400 border-slate-600') : 'bg-white text-slate-700 border-slate-200 shadow-sm'}`}>
+                                                    {activeLevel === 5 ? ex.macros : ex.sets}
                                                 </span>
                                             </div>
 
-                                            {/* Form Correction Block */}
+                                            {/* Expanded Content Block */}
                                             {isSelected && (
                                                 <div className="p-5 space-y-6 animate-in fade-in slide-in-from-top-2 duration-300">
                                                     
-                                                    {/* Video Embed inside the card */}
-                                                    <div className="aspect-video bg-black rounded-xl overflow-hidden shadow-sm border-2 border-emerald-500 relative">
+                                                    <div className={`aspect-video bg-black rounded-xl overflow-hidden shadow-sm border-2 relative ${activeLevel === 5 ? 'border-orange-500' : 'border-emerald-500'}`}>
                                                         <iframe 
                                                             key={`${activeDay}-${idx}-${ex.videoId}`}
                                                             className="w-full h-full absolute inset-0"
@@ -173,27 +174,42 @@ return (
                                                         </iframe>
                                                     </div>
 
-                                                    <div className="flex gap-4 p-4 bg-red-50 rounded-xl border border-red-100">
-                                                        <div className="mt-1"><AlertTriangle className="text-red-500" size={20} /></div>
-                                                        <div>
-                                                            <h4 className="font-bold text-red-900 mb-1 text-sm uppercase tracking-wide">Thao tác SAI (Nguy hiểm)</h4>
-                                                            <p className="text-red-700 text-sm leading-relaxed">{ex.wrong}</p>
-                                                        </div>
-                                                    </div>
+                                                    {activeLevel === 5 ? (
+                                                        <>
+                                                            <div className="p-4 bg-orange-50 rounded-xl border border-orange-100">
+                                                                <h4 className="font-bold text-orange-900 mb-2 text-sm uppercase tracking-wide flex items-center gap-2"><CheckCircle size={16}/> Nguyên Liệu Cần Chuẩn Bị</h4>
+                                                                <p className="text-orange-800 text-sm leading-relaxed">{ex.ingredients}</p>
+                                                            </div>
+                                                            <div className="p-4 bg-amber-50 rounded-xl border border-amber-100">
+                                                                <h4 className="font-bold text-amber-900 mb-2 text-sm uppercase tracking-wide flex items-center gap-2"><Flame size={16}/> Cách Nấu (Rất Dễ)</h4>
+                                                                <p className="text-amber-800 text-sm leading-relaxed whitespace-pre-line">{ex.recipe}</p>
+                                                            </div>
+                                                        </>
+                                                    ) : (
+                                                        <>
+                                                            <div className="flex gap-4 p-4 bg-red-50 rounded-xl border border-red-100">
+                                                                <div className="mt-1"><AlertTriangle className="text-red-500" size={20} /></div>
+                                                                <div>
+                                                                    <h4 className="font-bold text-red-900 mb-1 text-sm uppercase tracking-wide">Thao tác SAI (Nguy hiểm)</h4>
+                                                                    <p className="text-red-700 text-sm leading-relaxed">{ex.wrong}</p>
+                                                                </div>
+                                                            </div>
 
-                                                    <div className="flex gap-4 p-4 bg-emerald-50 rounded-xl border border-emerald-100">
-                                                        <div className="mt-1"><CheckCircle className="text-emerald-500" size={20} /></div>
-                                                        <div>
-                                                            <h4 className="font-bold text-emerald-900 mb-1 text-sm uppercase tracking-wide">Form CHUẨN (An toàn)</h4>
-                                                            <p className="text-emerald-800 text-sm leading-relaxed">{ex.right}</p>
-                                                        </div>
-                                                    </div>
+                                                            <div className="flex gap-4 p-4 bg-emerald-50 rounded-xl border border-emerald-100">
+                                                                <div className="mt-1"><CheckCircle className="text-emerald-500" size={20} /></div>
+                                                                <div>
+                                                                    <h4 className="font-bold text-emerald-900 mb-1 text-sm uppercase tracking-wide">Form CHUẨN (An toàn)</h4>
+                                                                    <p className="text-emerald-800 text-sm leading-relaxed">{ex.right}</p>
+                                                                </div>
+                                                            </div>
+                                                        </>
+                                                    )}
 
-                                                    <div className="flex gap-4 p-4 bg-amber-50 rounded-xl border border-amber-200">
-                                                        <div className="mt-1"><Lightbulb className="text-amber-500" size={20} /></div>
+                                                    <div className="flex gap-4 p-4 bg-indigo-50 rounded-xl border border-indigo-100">
+                                                        <div className="mt-1"><Lightbulb className="text-indigo-500" size={20} /></div>
                                                         <div>
-                                                            <h4 className="font-bold text-amber-900 mb-1 text-sm uppercase tracking-wide">Cải thiện ngay (Mẹo PT)</h4>
-                                                            <p className="text-amber-800 text-sm font-medium leading-relaxed">{ex.fix}</p>
+                                                            <h4 className="font-bold text-indigo-900 mb-1 text-sm uppercase tracking-wide">Mẹo Độc Quyền</h4>
+                                                            <p className="text-indigo-800 text-sm font-medium leading-relaxed">{ex.fix}</p>
                                                         </div>
                                                     </div>
                                                 </div>
