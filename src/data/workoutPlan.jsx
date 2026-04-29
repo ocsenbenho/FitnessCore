@@ -525,7 +525,7 @@ target: "Mông cực đại",
 wrong: "Cong lưng dưới để đẩy tạ. Nhìn lên trần nhà thay vì nhìn tới trước. Chân đặt quá xa/gần.",
 right: "Vai tựa vững trên ghế/giường. Đẩy bằng mông, mắt luôn nhìn về phía đầu gối.",
 fix: "Hơi cuộn xương cụt về trước và gồng chặt mông ở điểm trên cùng. Lên chậm, xuống chậm.",
-videoId: "rT7DgCr-3pg"
+videoId: "PqC0fmyNlmw"
 },
 {
 name: "Reverse Snow Angels",
@@ -551,7 +551,7 @@ target: "Ngực, Tay sau, Sức mạnh cơ bản",
 wrong: "Rớt hông khi hạ người. Khuỷu tay bành rộng 90 độ.",
 right: "Thân người thẳng băng. Hạ xuống cực kỳ chậm (3-4 giây). Có thể dùng gối để đẩy người lên.",
 fix: "Đây là cách tuyệt vời để tăng sức mạnh cho người chưa hít đất chuẩn được. Kiểm soát lực cản khi đi xuống.",
-videoId: "rT7DgCr-3pg"
+videoId: "kClpIqbsKts"
 },
 {
 name: "Superman Pull Downs",
@@ -621,7 +621,7 @@ target: "Cơ hình lê (Mông sâu), Khớp háng",
 wrong: "Lật hông ngã hẳn sang một bên. Không ép sát đùi chân sau xuống mặt sàn.",
 right: "Gập chân trước nằm ngang trên sàn. Vuốt thẳng chân sau. Úp hông song song với mặt thảm.",
 fix: "Nếu hông chưa đủ dẻo, hãy lót một chiếc khăn cuộn dưới mông chân trước để giữ khung chậu thăng bằng.",
-videoId: "rT7DgCr-3pg"
+videoId: "AI5A1PRYX7E"
 },
 {
 name: "Thread the Needle",
@@ -639,7 +639,7 @@ target: "Đùi trước (Quads), Gập hông (Hip Flexors)",
 wrong: "Võng lưng dưới cong oằn để cố đứng thẳng. Trọng tâm dồn hết về trước.",
 right: "Tựa gối sát vào tường/ghế sofa. Cẳng chân thẳng đứng. Giữ lưng thẳng, bụng siết.",
 fix: "Cuộn xương chậu lên trên (gồng mông) trước khi cố gắng đẩy lưng thẳng ra sau. Sự căng đùi sẽ cực mạnh.",
-videoId: "rT7DgCr-3pg"
+videoId: "_VS75Xtfp5E"
 }
 ]
 }
@@ -658,7 +658,7 @@ target: "Toàn thân, Mức tiêu thụ Oxy",
 wrong: "Tiếp đất quá nặng nề. Hông rớt chạm sàn khi sprawl.",
 right: "Chạy tại chỗ nâng cao đùi 4 nhịp, sau đó lập tức úp người xuống sprawl (như burpee không hít đất) rồi bật dậy.",
 fix: "Phải giữ nhịp độ liên tục. Đừng nghỉ khi chuyển giữa chạy và sprawl, hãy biến nó thành một chuỗi mượt mà.",
-videoId: "rT7DgCr-3pg"
+videoId: "g9u-JcVXYFM"
 },
 {
 name: "Jumping Lunges",
@@ -702,7 +702,7 @@ target: "Mông chéo, Đùi trong/ngoài",
 wrong: "Bước chân vắt chéo quá xa khiến hông bị xoay lệch khỏi hướng chính diện.",
 right: "Bước chân vắt chéo ra sau giống tư thế chào hoàng gia. Hông và vai vẫn hướng thẳng về trước.",
 fix: "Bài này ăn cực mạnh vào phần rãnh mông. Hãy xuống thật sâu và đẩy lên hoàn toàn bằng gót chân trước.",
-videoId: "rT7DgCr-3pg"
+videoId: "g8mCJDtD2DQ"
 },
 {
 name: "Glute Bridge Walkouts",
@@ -711,7 +711,7 @@ target: "Đùi sau (Hamstrings) cực hạn",
 wrong: "Hông xệ xuống mặt sàn khi bước chân ra xa.",
 right: "Từ tư thế cây cầu, bước từng gót chân ra xa mông cho đến khi chân gần thẳng, sau đó bước thu lại.",
 fix: "Gồng cứng cơ bụng. Nếu bạn cảm thấy đùi sau như sắp chuột rút, đó là bạn đang làm đúng. Làm thật chậm.",
-videoId: "rT7DgCr-3pg"
+videoId: "RpVJ40VGPr0"
 }
 ]
 },
@@ -728,7 +728,7 @@ target: "Toàn bộ hệ Core, Cơ gập hông",
 wrong: "Rụt vai lên mang tai. Lưng cong gập quá mức.",
 right: "Ngồi bệt, chống hai tay xuống sàn ngang hông. Dùng lực bụng ấn tay xuống để nhấc mông và đùi khỏi sàn (gót chân có thể chạm đất).",
 fix: "Ấn mạnh lòng bàn tay xuống sàn để bả vai được ghì chặt xuống. Siết bụng cực đại.",
-videoId: "rT7DgCr-3pg"
+videoId: "HxDP7SqggpI"
 },
 {
 name: "Plank with Arm/Leg Lift",
@@ -993,7 +993,7 @@ target: "Tay sau (Triceps)",
 wrong: "Nhấc mông quá xa khỏi mặt ghế. Rụt vai.",
 right: "Hai tay chống mép ghế. Mông lướt thẳng xuống sát thành ghế. Hạ đến khi khuỷu tay vuông góc.",
 fix: "Duỗi thẳng chân ra phía trước để tăng độ khó. Giữ ngực ưỡn cao để không bị khóa khớp vai.",
-videoId: "rT7DgCr-3pg"
+videoId: "thx13oPVK5c"
 }
 ]
 },
@@ -1019,7 +1019,7 @@ target: "Bắp đùi kêu gào, Bùng nổ",
 wrong: "Không xuống đủ sâu. Nghỉ quá lâu giữa các lần nhảy.",
 right: "Chuỗi: Nhảy đổi lunge chân trái -> Nhảy đổi lunge chân phải -> Nhảy chụm chân vào Squat sâu.",
 fix: "Đây là bài vắt kiệt sức đùi. Giữ lưng thẳng và tiếp đất bằng ức bàn chân để phản xạ nảy lên ngay lập tức.",
-videoId: "rT7DgCr-3pg"
+videoId: "acLvV5Gwi7o"
 },
 {
 name: "Hollow Rock",
@@ -1045,7 +1045,7 @@ target: "Cơ gập hông (Hip Flexors), Đùi trước",
 wrong: "Ưỡn cong thắt lưng để cố đẩy hông tới trước.",
 right: "Quỳ một gối. Cuộn xương chậu lên (gồng mông chân quỳ) và nhẹ nhàng đổ trọng tâm tới trước. Rướn tay cùng bên lên trần.",
 fix: "Bài tập hoàn hảo sau 30 ngày cày ải đùi. Thở sâu và chậm.",
-videoId: "rT7DgCr-3pg"
+videoId: "Q4Ko275cluo"
 },
 {
 name: "Lying Figure 4 Stretch",

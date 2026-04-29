@@ -13,7 +13,7 @@ import {
     Target
 } from 'lucide-react';
 
-const FALLBACK_VIDEO = "rT7DgCr-3pg";
+const FALLBACK_VIDEO = "_eQ2gw_Gg5Y";
 
 export const level3Plan = [
 {

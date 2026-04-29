@@ -1,7 +1,7 @@
 import React from "react";
 import { Activity, AlertTriangle, CheckCircle, Lightbulb, Flame, ShieldCheck, Footprints, Info, Dumbbell, Zap, Target, Wind, Droplets, Leaf, RefreshCw, Sparkles, Heart, Sun, Moon, Layers } from "lucide-react";
 
-const FALLBACK_VIDEO = "rT7DgCr-3pg";
+const FALLBACK_VIDEO = "2IcWJobNDck";
 
 export const mobilityPlan = [
   {

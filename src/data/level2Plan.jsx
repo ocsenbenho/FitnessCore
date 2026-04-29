@@ -10,7 +10,7 @@ import {
     Info
 } from 'lucide-react';
 
-const FALLBACK_VIDEO = "rT7DgCr-3pg";
+const FALLBACK_VIDEO = "hWbUlkb5Ms4";
 
 export const level2Plan = [
 {

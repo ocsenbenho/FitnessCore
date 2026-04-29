@@ -1,7 +1,7 @@
 import React from 'react';
 import { Sparkles, Sun, Moon, Heart, Wind, Star } from 'lucide-react';
 
-const FALLBACK = "rT7DgCr-3pg";
+const FALLBACK = "FPjppcOquE4";
 
 export const yogaPlan = [
 {

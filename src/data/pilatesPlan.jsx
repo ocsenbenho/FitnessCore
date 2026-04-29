@@ -1,7 +1,7 @@
 import React from 'react';
 import { Circle, Zap, Shield, Target, Layers, RefreshCw } from 'lucide-react';
 
-const FALLBACK = "rT7DgCr-3pg";
+const FALLBACK = "UaqpuUzs1i8";
 
 export const pilatesPlan = [
 {
