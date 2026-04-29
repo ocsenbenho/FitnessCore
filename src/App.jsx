@@ -23,20 +23,31 @@ import { pilatesPlan } from './data/pilatesPlan';
 const App = () => {
 const [activeDay, setActiveDay] = useState(0);
 const [activeExerciseIdx, setActiveExerciseIdx] = useState(0);
-const [activeLevel, setActiveLevel] = useState(1);
+const [activeLevel, setActiveLevel] = useState('gym');
+const [activeGymLevel, setActiveGymLevel] = useState(1); // 1=Sơ Cấp, 2=Trung Cấp, 3=Cao Cấp
 
 const levels = [
-    { id: 1, name: "Sơ Cấp", desc: "Nền tảng cơ bản" },
-    { id: 2, name: "Trung Cấp", desc: "Bro-Split 6 ngày" },
-    { id: 3, name: "Cao Cấp", desc: "Bứt phá giới hạn" },
+    { id: 'gym', name: "Fitness - Gym", desc: "Sơ / Trung / Cao Cấp" },
     { id: 4, name: "Mobility", desc: "Linh hoạt & Khôi phục" },
     { id: 5, name: "Dinh Dưỡng", desc: "Thực đơn 30 ngày" },
-    { id: 6, name: "Yoga", desc: "Tâm thị an nhên" },
+    { id: 6, name: "Yoga", desc: "Tâm thị an nhiên" },
     { id: 7, name: "Pilates", desc: "Kiểm soát cơ lõi" }
+];
+
+const gymSubLevels = [
+    { id: 1, name: "Sơ Cấp", desc: "Nền tảng" },
+    { id: 2, name: "Trung Cấp", desc: "Bro-Split" },
+    { id: 3, name: "Cao Cấp", desc: "Elite" },
 ];
 
 const handleLevelChange = (lvlId) => {
     setActiveLevel(lvlId);
+    setActiveDay(0);
+    setActiveExerciseIdx(0);
+};
+
+const handleGymSubLevelChange = (subId) => {
+    setActiveGymLevel(subId);
     setActiveDay(0);
     setActiveExerciseIdx(0);
 };
@@ -49,20 +60,20 @@ const handleDayChange = (idx) => {
 const getLevelColor = (id, isActive) => {
     if (!isActive) return 'bg-white hover:bg-slate-50 border border-slate-200 text-slate-600 hover:border-indigo-200';
     const colors = {
-        1: 'bg-gradient-to-br from-indigo-500 to-blue-600 shadow-indigo-500/30',
-        2: 'bg-gradient-to-br from-indigo-500 to-blue-600 shadow-indigo-500/30',
-        3: 'bg-gradient-to-br from-indigo-500 to-blue-600 shadow-indigo-500/30',
-        4: 'bg-gradient-to-br from-teal-500 to-emerald-600 shadow-teal-500/30',
-        5: 'bg-gradient-to-br from-amber-500 to-orange-600 shadow-orange-500/30',
-        6: 'bg-gradient-to-br from-violet-500 to-purple-600 shadow-violet-500/30',
-        7: 'bg-gradient-to-br from-pink-500 to-rose-600 shadow-pink-500/30',
+        gym: 'bg-gradient-to-br from-indigo-500 to-blue-600 shadow-indigo-500/30',
+        1:   'bg-gradient-to-br from-indigo-400 to-indigo-600 shadow-indigo-400/30',
+        2:   'bg-gradient-to-br from-blue-500 to-indigo-700 shadow-blue-500/30',
+        3:   'bg-gradient-to-br from-slate-600 to-slate-800 shadow-slate-700/30',
+        4:   'bg-gradient-to-br from-teal-500 to-emerald-600 shadow-teal-500/30',
+        5:   'bg-gradient-to-br from-amber-500 to-orange-600 shadow-orange-500/30',
+        6:   'bg-gradient-to-br from-violet-500 to-purple-600 shadow-violet-500/30',
+        7:   'bg-gradient-to-br from-pink-500 to-rose-600 shadow-pink-500/30',
     };
-    return `${colors[id] || colors[1]} text-white shadow-xl scale-105`;
+    return `${colors[id] || colors.gym} text-white shadow-xl scale-105`;
 };
 
-const activeArray = activeLevel === 1 ? workoutPlan
-    : activeLevel === 2 ? level2Plan
-    : activeLevel === 3 ? level3Plan
+const activeArray = activeLevel === 'gym'
+    ? (activeGymLevel === 1 ? workoutPlan : activeGymLevel === 2 ? level2Plan : level3Plan)
     : activeLevel === 4 ? mobilityPlan
     : activeLevel === 5 ? nutritionPlan
     : activeLevel === 6 ? yogaPlan
@@ -95,21 +106,58 @@ return (
     </header>
 
     <main className="max-w-5xl mx-auto mt-8 px-4">
-        {/* Level Selector — Framed Card */}
-        <div className="bg-white rounded-3xl shadow-sm border border-slate-200 p-5 mb-8">
-            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 px-1">Chọn Module Luyện Tập</p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2">
-                {levels.map((lvl) => (
-                    <button
-                        key={lvl.id}
-                        onClick={() => handleLevelChange(lvl.id)}
-                        className={`relative p-3 md:p-4 rounded-2xl text-left transition-all duration-300 overflow-hidden ${getLevelColor(lvl.id, activeLevel === lvl.id)}`}
-                    >
-                        <div className="text-sm md:text-base font-black leading-tight">{lvl.name}</div>
-                        <div className="text-xs font-medium opacity-75 mt-0.5 hidden md:block">{lvl.desc}</div>
-                    </button>
-                ))}
+        {/* Module Selector — Two separate framed sections */}
+        <div className="flex flex-col md:flex-row gap-4 mb-8">
+
+            {/* Workout Modules */}
+            <div className="flex-1 bg-white rounded-3xl shadow-sm border border-slate-200 p-5">
+                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 px-1">🏋️ Module Luyện Tập</p>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                    {levels.filter(lvl => lvl.id !== 5).map((lvl) => (
+                        <button
+                            key={lvl.id}
+                            onClick={() => handleLevelChange(lvl.id)}
+                            className={`relative p-3 rounded-2xl text-left transition-all duration-300 overflow-hidden ${getLevelColor(lvl.id, activeLevel === lvl.id)}`}
+                        >
+                            <div className="text-sm font-black leading-tight">{lvl.name}</div>
+                            <div className="text-xs font-medium opacity-75 mt-0.5 hidden lg:block">{lvl.desc}</div>
+                        </button>
+                    ))}
+                </div>
+
+                {/* Gym Sub-Levels — chỉ hiện khi Fitness-Gym đang active */}
+                {activeLevel === 'gym' && (
+                    <div className="mt-3 pt-3 border-t border-slate-100 flex gap-2">
+                        {gymSubLevels.map(sub => (
+                            <button
+                                key={sub.id}
+                                onClick={() => handleGymSubLevelChange(sub.id)}
+                                className={`flex-1 py-2 px-3 rounded-xl text-xs font-bold transition-all duration-200 ${
+                                    activeGymLevel === sub.id
+                                    ? 'bg-indigo-600 text-white shadow-md'
+                                    : 'bg-slate-100 text-slate-500 hover:bg-slate-200'
+                                }`}
+                            >
+                                {sub.name}
+                                <span className="block font-normal opacity-75 text-[10px]">{sub.desc}</span>
+                            </button>
+                        ))}
+                    </div>
+                )}
             </div>
+
+            {/* Nutrition Module */}
+            <div className="bg-white rounded-3xl shadow-sm border border-amber-200 p-5 md:w-48">
+                <p className="text-xs font-bold text-amber-400 uppercase tracking-widest mb-4 px-1">🍳 Dinh Dưỡng</p>
+                <button
+                    onClick={() => handleLevelChange(5)}
+                    className={`w-full p-4 rounded-2xl text-left transition-all duration-300 ${getLevelColor(5, activeLevel === 5)}`}
+                >
+                    <div className="text-base font-black leading-tight">Dinh Dưỡng</div>
+                    <div className="text-xs font-medium opacity-75 mt-1">Thực đơn 30 ngày</div>
+                </button>
+            </div>
+
         </div>
 
         {activeData ? (
