@@ -534,7 +534,7 @@ target: "Lưng giữa, Vai sau, Cột sống",
 wrong: "Ngóc đầu quá cao gây mỏi cổ. Tay chạm sàn khi quạt.",
 right: "Trán hướng xuống thảm. Quạt hai tay rộng vòng cung từ hông lên khỏi đầu mà không chạm sàn.",
 fix: "Siết chặt bả vai liên tục trong suốt hành trình cánh tay di chuyển. Nhấc tay cao hết mức.",
-videoId: "rT7DgCr-3pg"
+videoId: "gsGmdmizuow"
 }
 ]
 },
@@ -560,7 +560,7 @@ target: "Lưng xô (Lats), Lưng dưới",
 wrong: "Chỉ nhấc ngực mà không kéo tay. Chân đập vung vẩy.",
 right: "Nâng ngực khỏi sàn, tay vươn thẳng. Sau đó kéo giật cùi chỏ về phía hông (như đang kéo xà).",
 fix: "Tưởng tượng bạn đang nắm một thanh xà và dùng sức mạnh của lưng kéo nó sát vào ngực.",
-videoId: "rT7DgCr-3pg"
+videoId: "A80PjVHp3zY"
 },
 {
 name: "Pike Push Ups",
@@ -569,7 +569,7 @@ target: "Vai, Triceps",
 wrong: "Tư thế như hít đất thường. Đầu gối cong. Khuỷu tay loe ngang.",
 right: "Vào tư thế chữ V ngược (mông nhô cao). Hạ đỉnh đầu xuống sàn tạo thành hình tam giác với hai bàn tay.",
 fix: "Mắt nhìn về phía ngón chân. Đừng hạ mặt xuống giữa hai tay, hãy hạ đỉnh đầu hơi chếch về trước.",
-videoId: "rT7DgCr-3pg"
+videoId: "D_Ed8Ltoomc"
 }
 ]
 },
@@ -586,7 +586,7 @@ target: "Đùi trước, Đùi trong, Nhịp tim",
 wrong: "Không squat đủ sâu khi đáp xuống. Lưng gù cong.",
 right: "Nhảy bật hai chân dang rộng, đồng thời squat chạm tay xuống sàn. Bật thu chân lại đứng thẳng.",
 fix: "Tiếp đất nhẹ nhàng bằng mũi chân, đầu gối luôn mở theo hướng mũi giày để bảo vệ khớp.",
-videoId: "rT7DgCr-3pg"
+videoId: "ztSkRIwL4FY"
 },
 {
 name: "Plank Jacks",
@@ -595,7 +595,7 @@ target: "Core tĩnh, Tim mạch",
 wrong: "Mông nảy lên xuống dữ dội theo nhịp nhảy. Mất phom lưng thẳng.",
 right: "Giữ tư thế Plank hoàn hảo. Chỉ có hai chân nhảy dang ra và khép lại nhẹ nhàng.",
 fix: "Khoá chặt bụng và hông. Hình dung bạn đang phải giữ thăng bằng một ly nước trên lưng.",
-videoId: "rT7DgCr-3pg"
+videoId: "y8gBMe3BIZo"
 },
 {
 name: "Tuck Jumps (Bật thu gối)",
@@ -604,7 +604,7 @@ target: "Bùng nổ toàn thân",
 wrong: "Rơi rập mạnh bằng gót chân. Chỉ nhảy cao mà không co gối.",
 right: "Bật nhảy mạnh, co nhanh hai đầu gối lên cao sát ngực. Tiếp đất êm bằng mũi chân rồi hạ gót.",
 fix: "Cố gắng nảy lên ngay lập tức sau khi chạm đất. Sử dụng tay vung mạnh để tạo lực nâng.",
-videoId: "rT7DgCr-3pg"
+videoId: "ZR6aFqdRi2Y"
 }
 ]
 },
@@ -630,7 +630,7 @@ target: "Cột sống ngực, Bả vai",
 wrong: "Chuyển động quá gấp gáp. Hông trượt xa khỏi tư thế cái bàn.",
 right: "Luồn sâu một tay dưới nách tay kia đến khi vai chạm sàn. Thở ra khi xoay và hít vào khi vươn tay lên trần.",
 fix: "Dùng bàn tay đang chống đất đẩy nhẹ xuống sàn để tạo thêm lực vặn cho lồng ngực xoay sâu hơn.",
-videoId: "rT7DgCr-3pg"
+videoId: "YuAJ1i76Hek"
 },
 {
 name: "Couch Stretch",
@@ -667,7 +667,7 @@ target: "Đùi trước, Mông, Bùng nổ",
 wrong: "Đầu gối đập xuống sàn. Đổ người về phía trước làm mất trọng tâm.",
 right: "Hạ lunge sâu, dùng lực cả hai chân nảy người lên không trung và đổi chân trước khi tiếp đất.",
 fix: "Vung hai tay nhịp nhàng để tạo lực nâng cơ thể. Tập trung vào việc tiếp đất thật êm bằng mũi chân.",
-videoId: "rT7DgCr-3pg"
+videoId: "I_cwsX_95nw"
 },
 {
 name: "Speed Skaters",
@@ -746,7 +746,7 @@ target: "Bụng trên và dưới",
 wrong: "Chỉ gập cổ và nhấc chân. Dùng đà vung tay quá mạnh.",
 right: "Từ tư thế nằm duỗi thẳng, gập người hình chữ V sao cho hai tay chạm vào mũi chân.",
 fix: "Hãy cố gắng giữ thẳng đầu gối nhất có thể. Xuống chậm để kiểm soát cơ bụng.",
-videoId: "rT7DgCr-3pg"
+videoId: "saHkR_MvIdA"
 }
 ]
 },
