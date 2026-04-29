@@ -16,6 +16,8 @@ import { level2Plan } from './data/level2Plan';
 import { level3Plan } from './data/level3Plan';
 import { mobilityPlan } from './data/mobilityPlan';
 import { nutritionPlan } from './data/nutritionPlan';
+import { yogaPlan } from './data/yogaPlan';
+import { pilatesPlan } from './data/pilatesPlan';
 
 
 const App = () => {
@@ -28,7 +30,9 @@ const levels = [
     { id: 2, name: "Trung Cấp", desc: "Bro-Split 6 ngày" },
     { id: 3, name: "Cao Cấp", desc: "Bứt phá giới hạn" },
     { id: 4, name: "Mobility", desc: "Linh hoạt & Khôi phục" },
-    { id: 5, name: "Dinh Dưỡng", desc: "Thực đơn 30 ngày" }
+    { id: 5, name: "Dinh Dưỡng", desc: "Thực đơn 30 ngày" },
+    { id: 6, name: "Yoga", desc: "Tâm thị an nhên" },
+    { id: 7, name: "Pilates", desc: "Kiểm soát cơ lõi" }
 ];
 
 const handleLevelChange = (lvlId) => {
@@ -42,7 +46,28 @@ const handleDayChange = (idx) => {
     setActiveExerciseIdx(0);
 };
 
-const activeArray = activeLevel === 1 ? workoutPlan : (activeLevel === 2 ? level2Plan : (activeLevel === 3 ? level3Plan : (activeLevel === 4 ? mobilityPlan : (activeLevel === 5 ? nutritionPlan : []))));
+const getLevelColor = (id, isActive) => {
+    if (!isActive) return 'bg-white hover:bg-slate-50 border border-slate-200 text-slate-600 hover:border-indigo-200';
+    const colors = {
+        1: 'bg-gradient-to-br from-indigo-500 to-blue-600 shadow-indigo-500/30',
+        2: 'bg-gradient-to-br from-indigo-500 to-blue-600 shadow-indigo-500/30',
+        3: 'bg-gradient-to-br from-indigo-500 to-blue-600 shadow-indigo-500/30',
+        4: 'bg-gradient-to-br from-teal-500 to-emerald-600 shadow-teal-500/30',
+        5: 'bg-gradient-to-br from-amber-500 to-orange-600 shadow-orange-500/30',
+        6: 'bg-gradient-to-br from-violet-500 to-purple-600 shadow-violet-500/30',
+        7: 'bg-gradient-to-br from-pink-500 to-rose-600 shadow-pink-500/30',
+    };
+    return `${colors[id] || colors[1]} text-white shadow-xl scale-105`;
+};
+
+const activeArray = activeLevel === 1 ? workoutPlan
+    : activeLevel === 2 ? level2Plan
+    : activeLevel === 3 ? level3Plan
+    : activeLevel === 4 ? mobilityPlan
+    : activeLevel === 5 ? nutritionPlan
+    : activeLevel === 6 ? yogaPlan
+    : activeLevel === 7 ? pilatesPlan
+    : [];
 const activeData = activeArray.length > 0 ? (activeArray[activeDay] || activeArray[0]) : null;
 const activeExercise = activeData ? (activeData.exercises[activeExerciseIdx] || activeData.exercises[0]) : null;
 
@@ -70,24 +95,24 @@ return (
     </header>
 
     <main className="max-w-5xl mx-auto mt-8 px-4">
-        {/* Level Selector */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-12">
-            {levels.map((lvl) => (
-                <button
-                    key={lvl.id}
-                    onClick={() => handleLevelChange(lvl.id)}
-                    className={`relative p-5 rounded-3xl text-left transition-all duration-300 overflow-hidden group ${activeLevel === lvl.id
-                        ? (lvl.id === 5 ? 'bg-gradient-to-br from-amber-500 to-orange-600 shadow-orange-500/30 text-white shadow-xl scale-105' : (lvl.id === 4 ? 'bg-gradient-to-br from-teal-500 to-emerald-600 shadow-teal-500/30 text-white shadow-xl scale-105' : 'bg-gradient-to-br from-indigo-500 to-blue-600 shadow-indigo-500/30 text-white shadow-xl scale-105'))
-                        : 'bg-white hover:bg-slate-50 border border-slate-200 text-slate-600 hover:border-indigo-200'
-                        }`}
-                >
-                    <div className="text-base md:text-lg font-black">{lvl.name}</div>
-                    <div className="text-xs font-medium opacity-80 mt-1">{lvl.desc}</div>
-                </button>
-            ))}
+        {/* Level Selector — Framed Card */}
+        <div className="bg-white rounded-3xl shadow-sm border border-slate-200 p-5 mb-8">
+            <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 px-1">Chọn Module Luyện Tập</p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2">
+                {levels.map((lvl) => (
+                    <button
+                        key={lvl.id}
+                        onClick={() => handleLevelChange(lvl.id)}
+                        className={`relative p-3 md:p-4 rounded-2xl text-left transition-all duration-300 overflow-hidden ${getLevelColor(lvl.id, activeLevel === lvl.id)}`}
+                    >
+                        <div className="text-sm md:text-base font-black leading-tight">{lvl.name}</div>
+                        <div className="text-xs font-medium opacity-75 mt-0.5 hidden md:block">{lvl.desc}</div>
+                    </button>
+                ))}
+            </div>
         </div>
 
-        {(activeLevel === 1 || activeLevel === 2 || activeLevel === 3 || activeLevel === 4 || activeLevel === 5) && activeData ? (
+        {activeData ? (
             <>
                 {/* Navigation Tabs */}
                 <div className="flex flex-wrap gap-3 mb-8">
